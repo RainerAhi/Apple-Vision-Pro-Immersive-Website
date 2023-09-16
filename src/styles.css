@@ -74,11 +74,12 @@ body {
   background: transparent;
 }
 
-.first p {
+.onep {
   font-size: 1.6rem;
   line-height: 2rem;
   font-weight: bold;
   text-align: center;
+  margin-top: -11%;
 }
 
 .section--one--container{
@@ -87,13 +88,17 @@ body {
   margin-top: 7.5%;
 }
 
-.first h1{
+.oneh1{
   font-size: 5.7rem;
   line-height: 8rem;
   letter-spacing: -0.3rem;
   width: 50%;
   margin: auto;
   color: #f07c4d;
+}
+
+.popup {
+  visibility: hidden;
 }
 
 .button--hero{
@@ -488,12 +493,123 @@ footer{
     overflow-x: hidden;
   }
 
-  .first h1{
-    font-size: 4rem;
-    line-height: 4rem;
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  .oneh1{
+    font-size: 3.25rem;
+    line-height: 2.5rem;
     letter-spacing: -0.1rem;
-    width: 50%;
-    margin: 0 0 15px 0px;
+    width: 85%;
+    margin: auto;
+    visibility: hidden;
+  }
+
+  .onep{
+    visibility: hidden;
+  }
+
+  .popup {
+    visibility: visible;
+    font-size: 2rem;
+    line-height: 2.25rem;
+    letter-spacing: -0.1rem;
+    width: 100%;
+    margin: auto;
+    margin-top: 10px;
+    text-align: center;
+    color: #f07c4d;
+  }
+
+  .second h1{
+    font-size: 3.25rem;
+    line-height: 2.5rem;
+    letter-spacing: -0.1rem;
+    width: 85%;
+    margin: auto;
+  }
+
+  .second p{
+    font-size: 1.4rem;
+    line-height: 1.3rem;
+    letter-spacing: -0.1rem;
+    width: 100%;
+    margin: auto;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .third h1{
+    font-size: 3.25rem;
+    line-height: 2.5rem;
+    letter-spacing: -0.1rem;
+    width: 85%;
+    margin: auto;
+  }
+
+  .third p{
+    font-size: 1.4rem;
+    line-height: 1.3rem;
+    letter-spacing: -0.1rem;
+    width: 100%;
+    margin: auto;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .forth h1{
+    font-size: 3.25rem;
+    line-height: 2.5rem;
+    letter-spacing: -0.1rem;
+    width: 85%;
+    margin: auto;
+  }
+
+  .fifth h1{
+    font-size: 3.25rem;
+    line-height: 2.5rem;
+    letter-spacing: -0.1rem;
+    width: 85%;
+    margin: auto;
+  }
+
+  .fifth p{
+    font-size: 1.4rem;
+    line-height: 1.3rem;
+    letter-spacing: -0.1rem;
+    width: 100%;
+    margin: auto;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .forth p{
+    font-size: 1.4rem;
+    line-height: 1.3rem;
+    letter-spacing: -0.1rem;
+    width: 100%;
+    margin: auto;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .seventh h1{
+    font-size: 3.25rem;
+    line-height: 2.5rem;
+    letter-spacing: -0.1rem;
+    width: 85%;
+    margin: auto;
+  }
+
+  .seventh p{
+    font-size: 1.4rem;
+    line-height: 1.3rem;
+    letter-spacing: -0.1rem;
+    width: 100%;
+    margin: auto;
+    margin-top: 10px;
+    text-align: center;
   }
 
   .nav--bar{

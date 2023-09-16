@@ -81,14 +81,14 @@ async function setupViewer(){
     // Import and add a GLB file.
     await viewer.load("./assets/vision.glb")
 
-    const drillMaterial = manager.materials!.findMaterialsByName("Drill_01")[0] as MeshStandardMaterial2
+    console.log(viewer.scene.modelObject.position)
 
     viewer.scene.activeCamera.setCameraOptions({controlsEnabled: false})
 
     if(isMobile) {
-        position.set(-3.10, -3.46, 7.45)
-        target.set(-0.51, -0.01, -0.42)
-        camera.setCameraOptions({fov: 30})
+        position.set(0, 2, 0)
+        target.set(0, 2, 0)
+        camera.setCameraOptions({fov: 100})
     }
 
     window.scrollTo(0, 0)
@@ -100,7 +100,7 @@ async function setupViewer(){
         // First to second
 
         tl
-        .to(position, {x: isMobile ? -4 : 0.285, y: isMobile ? 6.06 : 0.05, z: isMobile ? -2.72 : 7.3,
+        .to(position, {x: 0.285, y: 0.05, z: 7.3,
             scrollTrigger: {
                 trigger: ".second",
                 start:"top bottom",
@@ -115,7 +115,7 @@ async function setupViewer(){
                 end: "top 90%", scrub: 1,
                 immediateRender: false
         }})
-        .to(target, {x: isMobile ? -0.08 : -0.076, y: isMobile ? 0.08 : 0.423 , z: isMobile ? 0.04 : 0.077,
+        .to(target, {x: -0.076, y: 0.423 , z: 0.077,
             scrollTrigger: {
                 trigger: ".second",
                 start:"top bottom",
@@ -246,12 +246,6 @@ async function setupViewer(){
         }
     })
 
-    // KNOW MORE EVENT
-	document.querySelector('.button--hero')?.addEventListener('click', () => {
-		const element = document.querySelector('.second')
-		window.scrollTo({ top: element?.getBoundingClientRect().top, left: 0, behavior: 'smooth' })
-	})
-
 	// SCROLL TO TOP
 	document.querySelectorAll('.button--footer')?.forEach(item => {
 		item.addEventListener('click', () => {
@@ -265,58 +259,6 @@ async function setupViewer(){
 			window.scrollTo({ top: 2000, left: 0, behavior: 'smooth' })
 		})
 	})
-
-    //CUSTOMIZE
-    const sections = document.querySelector(".container") as HTMLElement
-    const mainContainer = document.getElementById("webgi-canvas-container") as HTMLElement
-    document.querySelector(".button--customize")?.addEventListener("click", () => {
-
-        sections.style.visibility = "hidden"
-        mainContainer.style.pointerEvents = "all"
-        document.body.style.cursor = "grab"
-
-        gsap.to(position, {x: -2.6, y: 0.2, z: -9.6, duration: 2, ease: "power3.inOut", onUpdate})
-        gsap.to(target, {x: 0, y: 0 , z: 0.12, duration: 2, ease: "power3.inOut", onUpdate, onComplete: enableControlers})
-
-    })
-
-    function enableControlers(){
-        exitButton.style.visibility = "visible"
-        customizerInterface.style.visibility = "visible"
-        viewer.scene.activeCamera.setCameraOptions({controlsEnabled: true})
-    }
-
-    // EXIT CUSTOMIZER
-	exitButton.addEventListener('click', () => {
-        gsap.to(position, {x: -3, y: -0.6, z: 1.5, duration: 1, ease: "power3.inOut", onUpdate})
-        gsap.to(target, {x: -1, y: 1 , z: -0.44, duration: 1, ease: "power3.inOut", onUpdate})
-
-        viewer.scene.activeCamera.setCameraOptions({controlsEnabled: false})
-        sections.style.visibility = "visible"
-        mainContainer.style.pointerEvents = "none"
-        document.body.style.cursor = "default"
-        exitButton.style.visibility = "hidden"
-        customizerInterface.style.visibility = "hidden"
-
-	})
-
-    document.querySelector('.button--colors.black')?.addEventListener('click', () => {
-        changeColor(new Color(0x383830))
-	})
-
-    document.querySelector('.button--colors.red')?.addEventListener('click', () => {
-        changeColor(new Color(0xfe2d2d))
-	})
-
-    document.querySelector('.button--colors.yellow')?.addEventListener('click', () => {
-        changeColor(new Color(0xffffff))
-	})
-
-
-    function changeColor(_colorToBeChanged: Color){
-        drillMaterial.color = _colorToBeChanged;
-        viewer.scene.setDirty()
-    }
 
 }
 
