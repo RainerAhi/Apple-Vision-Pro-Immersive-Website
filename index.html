@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>3D SCROLLABLE PAGE TEMPLATE</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<div class="loader" >
+		<h1>LOADING</h1>
+		<div class="progress" ></div>
+	</div>
+
+	<nav class="nav--bar" > 
+		<h1 class="logo-text">APPLE</h1>
+		<h1 class="logo-text">Rainer Ahi</h1>
+	</nav>
+
+	<div class="container" >
+
+	<section class="section first" >
+		<div class="section--one--container" >
+		    <h1>Virtual Reality</h1>
+		    <p>Welcome to the era of spatial computing. The Apple Vision Pro seamlessly blends digital content with your physical space. You navigate simply by using your eyes, hands and voice.</p>
+		</div>
+	</section>
+
+	<section class="section second" >
+		<div class="section--two--container" >
+		    <h1>Apple Vision Pro</h1>
+			<button class="learn-more" >Starts at $3499</button>
+		    <p>Available early next year in the U.S.</p>
+			<button class="view-more" >Take a Closer Look</button>
+		</div>
+		<!-- <div class="custom--bg" ></div> -->
+	</section>
+
+	<section class="section third" >
+		<div class="section--third--container" > 
+		    <h1>Your Apps Live In Your Space</h1>
+		    <p>With Apple Vision Pro, you have an infinite canvas that transforms how you use the apps you love. Arrange apps anywhere and scale them to the perfect size, making the workspace of your dreams a reality — all while staying present in the world around you. Browse the web in Safari, create a to-do list in Notes, chat in Messages, and seamlessly move between them with a glance.</p>
+		    <!-- <button class="button--customize">CUSTOMIZE</button> -->
+		</div>
+	</section>
+
+	<section class="section forth" >
+		<div class="section--forth--container" > 
+		    <h1>An immersive way to experience entertainment</h1>
+		    <p>Apple Vision Pro can transform any room into your own personal theater. Expand your movies, shows, and games up to the perfect size while feeling like you’re part of the action with Spatial Audio. And with more pixels than a 4K TV for each eye, you can enjoy stunning content wherever you are — whether that’s a long flight or the couch at home.</p>
+		</div>
+	</section>
+
+	<section class="section fifth" >
+		<div class="section--fifth--container" >
+			<p class="orange" >Technology</p> 
+		    <h1>Innovation you can see, hear, and feel</h1>
+		    <p class="fivep" >Pushing boundaries from the inside out. Spatial experiences on Apple Vision Pro are only possible through groundbreaking Apple technology. Displays the size of a postage stamp that deliver more pixels than a 4K TV to each eye. Incredible advances in Spatial Audio. A revolutionary dual‑chip design featuring custom Apple silicon. A sophisticated array of cameras and sensors. All the elements work together to create an unprecedented experience you have to see to believe.
+			</p>
+		</div>
+	</section>
+
+	<section class="section sixth" >
+		<div class="section--sixth--container" >
+			<img src="/assets/appleimg4.jpg" class="section--image" />
+		</div>
+	</section>
+
+	<section class="section seventh" >
+		<div class="section--seventh--container" >
+		    <h1>Website By Rainer Ahi</h1>
+		    <p>Thank you for exploring my first immersive 3D website, made with THREE.js and HTML/CSS. I hope you enjoyed it & got some insipiration for your own future websites. You can keep up with what I am doing at the moment by following me on Twitter/Instagram/Youtube.</p>
+		</div>
+	</section>
+
+	<footer>
+		<button class="button--footer" >BACK TO TOP</button>
+	</footer>
+
+    </div>
+
+	<div id="webgi-canvas-container">
+		<canvas id="webgi-canvas"></canvas>
+		<button class="button--customize button--exit" >EXIT</button>
+	</div>
+
+	<div class="customizer--container">
+		<ul class="strap--colors">
+			<li class="button--colors yellow"></li>
+			<li class="button--colors red"></li>
+			<li class="button--colors black"></li>
+		</ul>
+	</div>
+
+
+	<script src="src/index.ts" type="module"></script>
+</body>
+
+</html>
