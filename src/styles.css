@@ -503,23 +503,17 @@ footer{
     letter-spacing: -0.1rem;
     width: 85%;
     margin: auto;
-    visibility: hidden;
   }
 
   .onep{
-    visibility: hidden;
-  }
-
-  .popup {
-    visibility: visible;
-    font-size: 2rem;
-    line-height: 2.25rem;
+    font-size: 1.4rem;
+    line-height: 1.3rem;
     letter-spacing: -0.1rem;
     width: 100%;
     margin: auto;
     margin-top: 10px;
     text-align: center;
-    color: #f07c4d;
+    color: grey;
   }
 
   .second h1{

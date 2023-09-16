@@ -86,9 +86,9 @@ async function setupViewer(){
     viewer.scene.activeCamera.setCameraOptions({controlsEnabled: false})
 
     if(isMobile) {
-        position.set(0, 2, 0)
-        target.set(0, 2, 0)
-        camera.setCameraOptions({fov: 100})
+        position.set(9.32, 0.523, 0.2)
+        target.set(-1.21, 0.87, -0.027)
+        camera.setCameraOptions({fov: 30})
     }
 
     window.scrollTo(0, 0)
@@ -100,7 +100,7 @@ async function setupViewer(){
         // First to second
 
         tl
-        .to(position, {x: 0.285, y: 0.05, z: 7.3,
+        .to(position, {x: isMobile ? 0.57 : 0.285, y: isMobile ? 0.27 : 0.05, z: isMobile ? 14.12 : 7.3,
             scrollTrigger: {
                 trigger: ".second",
                 start:"top bottom",
@@ -115,7 +115,7 @@ async function setupViewer(){
                 end: "top 90%", scrub: 1,
                 immediateRender: false
         }})
-        .to(target, {x: -0.076, y: 0.423 , z: 0.077,
+        .to(target, {x: isMobile ? -0.02 : -0.076, y: isMobile ? 0.132 : 0.423 , z: isMobile ? 0.14 : 0.077,
             scrollTrigger: {
                 trigger: ".second",
                 start:"top bottom",
