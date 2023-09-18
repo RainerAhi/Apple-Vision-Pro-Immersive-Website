@@ -1,7 +1,7 @@
 {
   "name": "webgi-vanilla-typescript",
   "version": "1.0.0",
-  "description": "WebGi + TypeScript example starter project",
+  "description": "Apple Vision Pro Immersive Website By Rainer Ahi",
   "main": "index.html",
   "scripts": {
     "dev": "vite",
